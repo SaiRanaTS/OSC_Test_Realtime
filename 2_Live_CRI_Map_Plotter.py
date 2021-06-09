@@ -240,14 +240,14 @@ def update(frame):
     # -----------------------------------------------------------------------------------------------------------------#
 
     data1 = pd.read_csv('AutoPilot_Data_Gen/Auto_OWN.csv')
-    x89 = data1['Time']
-    numberiii = len(x89)-1
+    x00 = data1['Time']
+    numberiii = len(x00)-1
 
 
-    OwnGen_x = data1['AX'][x89][numberiii]
-    OwnGen_y = data1['AY'][x89][numberiii]
-    OwnGen_Velo= data1['AV'][x89][numberiii]
-    OwnGen_ang = data1['AH'][x89][numberiii]
+    OwnGen_x = data1['AX'][x00][numberiii]
+    OwnGen_y = data1['AY'][x00][numberiii]
+    OwnGen_Velo = data1['AV'][x00][numberiii]
+    OwnGen_ang = data1['AH'][x00][numberiii]
 
     #print('Own X:',OwnGen_x)
     #print('Own Y:', OwnGen_y)
@@ -284,15 +284,15 @@ def update(frame):
 
     plt_ov_txt = plt.text(ov_x[-1] + 100, ov_y[-1], f'Own Ship : Ulstein', fontsize=10, color='white')
     #data = pd.read_csv('data.csv')
-    data = pd.read_csv('Data_Input/TS_Data.csv')
-    x89 = data['number']
-    numberiii = len(x89)-1
+    data1 = pd.read_csv('Sim_Live_Data/TS1_Data.csv')
+    x11 = data1['Num']
+    numberiii = len(x11)-1
 
 
-    ts1gen_x = data['T1x'][x89][numberiii]
-    ts1gen_y = data['T1y'][x89][numberiii]
-    ts1gen_Velo= data['T1v'][x89][numberiii]
-    ts1gen_ang = data['T1h'][x89][numberiii]
+    ts1gen_x = data1['Lo'][x11][numberiii]
+    ts1gen_y = data1['La'][x11][numberiii]
+    ts1gen_Velo= data1['Total Speed'][x11][numberiii]
+    ts1gen_ang = data1['Heading(Deg)'][x11][numberiii]
     #print(ts1gen_ang)
     #print(ts1gen_Velo)
     #print(ts1gen_x)
@@ -475,10 +475,15 @@ def update(frame):
 
     Ts2_ln = 100  # Length of TS 2
 
-    ts2gen_x = data['T2x'][x89][numberiii]
-    ts2gen_y = data['T2y'][x89][numberiii]
-    ts2gen_Velo= data['T2v'][x89][numberiii]
-    ts2gen_ang = data['T2h'][x89][numberiii]
+    data2 = pd.read_csv('Sim_Live_Data/TS2_Data.csv')
+    x22 = data2['Num']
+    numberiii = len(x22)-1
+
+
+    ts2gen_x = data2['Lo'][x22][numberiii]
+    ts2gen_y = data2['La'][x22][numberiii]
+    ts2gen_Velo = data2['Total Speed'][x22][numberiii]
+    ts2gen_ang = data2['Heading(Deg)'][x22][numberiii]
 
     #print(ts2gen_Velo)
 
@@ -565,10 +570,17 @@ def update(frame):
 
     Ts3_ln = 100
 
-    ts3gen_x = data['T3x'][x89][numberiii]
-    ts3gen_y = data['T3y'][x89][numberiii]
-    ts3gen_Velo= data['T3v'][x89][numberiii]
-    ts3gen_ang = data['T3h'][x89][numberiii]
+    data3 = pd.read_csv('Sim_Live_Data/TS3_Data.csv')
+    x33 = data3['Num']
+    numberiii = len(x33)-1
+
+
+    ts3gen_x = data3['Lo'][x33][numberiii]
+    ts3gen_y = data3['La'][x33][numberiii]
+    ts3gen_Velo = data3['Total Speed'][x33][numberiii]
+    ts3gen_ang = data3['Heading(Deg)'][x33][numberiii]
+
+
     #print(ts3gen_Velo)
 
 
@@ -654,10 +666,18 @@ def update(frame):
 
     Ts4_ln = 100
 
-    ts4gen_x = data['T4x'][x89][numberiii]
-    ts4gen_y = data['T4y'][x89][numberiii]
-    ts4gen_Velo= data['T4v'][x89][numberiii]
-    ts4gen_ang = data['T4h'][x89][numberiii]
+    data4 = pd.read_csv('Sim_Live_Data/TS4_Data.csv')
+    x44 = data4['Num']
+    numberiii = len(x44)-1
+
+
+    ts4gen_x = data4['Lo'][x44][numberiii]
+    print(ts4gen_x)
+    ts4gen_y = data4['La'][x44][numberiii]
+    ts4gen_Velo = data4['Total Speed'][x44][numberiii]
+    ts4gen_ang = data4['Heading(Deg)'][x44][numberiii]
+
+
     #print(ts4gen_Velo)
 
 
@@ -745,10 +765,16 @@ def update(frame):
 
     Ts5_ln = 100
 
-    ts5gen_x = data['T5x'][x89][numberiii]
-    ts5gen_y = data['T5y'][x89][numberiii]
-    ts5gen_Velo= data['T5v'][x89][numberiii]
-    ts5gen_ang = data['T5h'][x89][numberiii]
+    data5 = pd.read_csv('Sim_Live_Data/TS5_Data.csv')
+    x55 = data5['Num']
+    numberiii = len(x55)-1
+
+    ts5gen_x = 65000#data5['Lo'][x55][numberiii]
+    ts5gen_y = 36000#data5['La'][x55][numberiii]
+    ts5gen_Velo = 0#data5['Total Speed'][x55][numberiii]
+    ts5gen_ang = 20#data5['Heading(Deg)'][x55][numberiii]
+
+
 
     tv5_x.append(ts5gen_x - origin_x)
     #print("TS5 x :", str2float(tv5_data.row_values(frame)[4]))
@@ -1004,5 +1030,5 @@ mngr = plt.get_current_fig_manager()
 mngr.window.wm_geometry("+0+0")
 
 plt.show()
-ani.save('test_animation.gif', writer='imagemagick')
-ani.save('test_animation.mp4', writer='PillowWriter')
+#ani.save('test_animation.gif', writer='imagemagick')
+#ani.save('test_animation.mp4', writer='PillowWriter')
