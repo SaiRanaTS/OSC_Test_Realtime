@@ -61,7 +61,7 @@ if __name__ == '__main__':
     step_size, max_iters, goal_threashold = 10, 600, 0.9
     step_size_ = 10
 
-    start, goal = (0, 0), (14, 4200)
+    start, goal = (14, 4200), (0, 0)
     is_plot = True
     if is_plot:
         img = plt.imread('Path_Planner_Support_Files/with island2.jpg')
@@ -90,7 +90,7 @@ if __name__ == '__main__':
         p1 = 10 * cos_degt1
         Pio = plt.quiver(2750, 550, z1, p1, scale=110, color='white', pivot='middle')
 
-    obs = [[40, 2000],[-150, 2800]]
+    obs = [[540, 2000],[-550, 2800]]
 
     print('obstacles: {0}'.format(obs))
     for i in range(0):

@@ -348,7 +348,7 @@ def main():
     max_simulation_time = 2000
 
     # Initial state
-    state = State(x=0, y=0, yaw=np.radians(00.0), v=0.0)
+    state = State(x=14, y=4200, yaw=np.radians(00.0), v=0.0)
 
     last_idx = len(cx) - 1
     time = 0.0

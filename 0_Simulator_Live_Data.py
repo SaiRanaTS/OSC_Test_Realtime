@@ -132,7 +132,7 @@ def TS1_find_gps_port_value(actor, port_type, port_name_ls,n):
     print('Total Speed :',total_speed)
     print('Long: ',gps_info[2])
     print('Latt: ', gps_info[3])
-    hdz1 = math.degrees(gps_info[4]) -90
+    hdz1 = math.degrees(gps_info[4])
     if hdz1 < 0:
         ha1 = hdz1 + 360
     else:
@@ -196,7 +196,7 @@ def TS2_find_gps_port_value(actor, port_type, port_name_ls,n):
     print('Total Speed :',total_speed)
     print('Long: ',gps_info[2])
     print('Latt: ', gps_info[3])
-    hdz2 = math.degrees(gps_info[4]) - 90
+    hdz2 = math.degrees(gps_info[4])
     if hdz2 < 0:
         ha2 = hdz2 + 360
     else:
@@ -260,7 +260,7 @@ def TS3_find_gps_port_value(actor, port_type, port_name_ls,n):
     print('Long: ',gps_info[2])
     print('Latt: ', gps_info[3])
 
-    hdz3 = math.degrees(gps_info[4]) - 90
+    hdz3 = math.degrees(gps_info[4])
     if hdz3 < 0:
         ha3 = hdz3 + 360
     else:
@@ -326,7 +326,7 @@ def TS4_find_gps_port_value(actor, port_type, port_name_ls,n):
     print('Long: ',gps_info[2])
     print('Latt: ', gps_info[3])
 
-    hdz4 = math.degrees(gps_info[4]) - 90
+    hdz4 = math.degrees(gps_info[4])
     if hdz4 < 0:
         ha4 = hdz4 + 360
     else:
@@ -391,7 +391,7 @@ def TS5_find_gps_port_value(actor, port_type, port_name_ls,n):
     print('Long: ',gps_info[2])
     print('Latt: ', gps_info[3])
 
-    hdz5 = math.degrees(gps_info[4]) - 90
+    hdz5 = math.degrees(gps_info[4])
     if hdz5 < 0:
         ha5 = hdz5 + 360
     else:
