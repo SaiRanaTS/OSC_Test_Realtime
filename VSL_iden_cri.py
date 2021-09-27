@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-
 import matplotlib.pyplot as plt
 from itertools import count
 import pandas as pd
@@ -24,28 +23,16 @@ ax.imshow(img, alpha=0.96)
 
 plt.grid(alpha=0.2)
 plt.axis('off')
-
-
 ax1 = fig.add_subplot(251)
 ax2 = fig.add_subplot(252)
-
 ax3 = fig.add_subplot(253)
 ax4 = fig.add_subplot(254)
 ax5 = fig.add_subplot(255)
-
-
 ax6 = fig.add_subplot(256)
 ax7 = fig.add_subplot(257)
 ax8 = fig.add_subplot(258)
 ax9 = fig.add_subplot(259)
 ax10 = fig.add_subplot(2,5,10)
-
-
-
-
-
-
-
 
 def vsl_colr(crix):
     if crix <= 0.1:
@@ -69,7 +56,6 @@ def vsl_colr(crix):
     else:
         cl = 'yellow'
         return cl
-
 
 n = 0
 nx = 0
@@ -123,7 +109,7 @@ def animate(i):
         ax1.set_xticklabels(list(l1_cap))
         ax1.set_yticklabels(list(h1_cap))
         ax1.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax1.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax1.text(400, 0, f' T1: PSV_UT754WP\n IMO Number: 100230', fontsize=10, color='white')
         # ax2.axis('off')
         nx += 1
 
@@ -150,7 +136,7 @@ def animate(i):
         ax1.set_xticklabels(list(l1_cap))
         ax1.set_yticklabels(list(h1_cap))
         ax1.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax1.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax1.text(400, 0, f' T1: PSV_UT754WP\n IMO Number: 100230', fontsize=10, color='white')
         # ax2.axis('off')
         nx += 1
 
@@ -176,7 +162,7 @@ def animate(i):
         ax1.set_xticklabels(list(l1_cap))
         ax1.set_yticklabels(list(h1_cap))
         ax1.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax1.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax1.text(400, 0, f' T1: PSV_UT754WP\n IMO Number: 100230', fontsize=10, color='white')
         # ax2.axis('off')
         nx += 1
 
@@ -203,7 +189,7 @@ def animate(i):
         ax1.set_xticklabels(list(l1_cap))
         ax1.set_yticklabels(list(h1_cap))
         ax1.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax1.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax1.text(400, 0, f' T1: PSV_UT754WP\n IMO Number: 100230', fontsize=10, color='white')
         nx = 0
 
 
@@ -235,7 +221,7 @@ def animate(i):
         ax2.set_xticklabels(list(l2_cap))
         ax2.set_yticklabels(list(h2_cap))
         ax2.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax2.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax2.text(400, 0, f' T2: PSV_UT751E\n IMO Number: 104285', fontsize=10, color='white')
         # ax2.axis('off')
         nx2 += 1
 
@@ -262,7 +248,7 @@ def animate(i):
         ax2.set_xticklabels(list(l2_cap))
         ax2.set_yticklabels(list(h2_cap))
         ax2.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax2.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax2.text(400, 0, f' T2: PSV_UT751E\n IMO Number: 104285', fontsize=10, color='white')
         # ax2.axis('off')
         nx2 += 1
 
@@ -288,7 +274,7 @@ def animate(i):
         ax2.set_xticklabels(list(l2_cap))
         ax2.set_yticklabels(list(h2_cap))
         ax2.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax2.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax2.text(400, 0, f' T2: PSV_UT751E\n IMO Number: 104285', fontsize=10, color='white')
         # ax2.axis('off')
         nx2 += 1
 
@@ -315,12 +301,8 @@ def animate(i):
         ax2.set_xticklabels(list(l2_cap))
         ax2.set_yticklabels(list(h2_cap))
         ax2.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax2.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax2.text(400, 0, f' T2: PSV_UT751E\n IMO Number: 104285', fontsize=10, color='white')
         nx2 = 0
-
-
-
-
 #++++++++++++++++++++++++++
 
     if nx3 == 0:
@@ -345,7 +327,7 @@ def animate(i):
         ax3.set_xticklabels(list(l3_cap))
         ax3.set_yticklabels(list(h3_cap))
         ax3.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax3.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax3.text(400, 0, f' T3: PSV_3300CD\n IMO Number: 101290', fontsize=10, color='white')
         # ax2.axis('off')
         nx3 += 1
 
@@ -372,7 +354,7 @@ def animate(i):
         ax3.set_xticklabels(list(l3_cap))
         ax3.set_yticklabels(list(h3_cap))
         ax3.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax3.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax3.text(400, 0, f' T3: PSV_3300CD\n IMO Number: 101290', fontsize=10, color='white')
         # ax2.axis('off')
         nx3 += 1
 
@@ -398,7 +380,7 @@ def animate(i):
         ax3.set_xticklabels(list(l3_cap))
         ax3.set_yticklabels(list(h3_cap))
         ax3.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax3.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax3.text(400, 0, f' T3: PSV_3300CD\n IMO Number: 101290', fontsize=10, color='white')
         # ax2.axis('off')
         nx3 += 1
 
@@ -425,16 +407,9 @@ def animate(i):
         ax3.set_xticklabels(list(l3_cap))
         ax3.set_yticklabels(list(h3_cap))
         ax3.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax3.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax3.text(400, 0, f' T3: PSV_3300CDl\n IMO Number: 101290', fontsize=10, color='white')
         nx3 = 0
-
-
-
-
-
 #++++++++++++++++++++++++++
-
-
 #++++++++++++++++++++++++++
 
     if nx4 == 0:
@@ -459,7 +434,7 @@ def animate(i):
         ax4.set_xticklabels(list(l4_cap))
         ax4.set_yticklabels(list(h4_cap))
         ax4.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax4.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax4.text(400, 0, f' T4: PX105_RMY\n IMO Number: 101412', fontsize=10, color='white')
         # ax2.axis('off')
         nx4 += 1
 
@@ -486,7 +461,7 @@ def animate(i):
         ax4.set_xticklabels(list(l4_cap))
         ax4.set_yticklabels(list(h4_cap))
         ax4.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax4.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax4.text(400, 0, f' T4: PX105_RMY\n IMO Number: 101412', fontsize=10, color='white')
         # ax2.axis('off')
         nx4 += 1
 
@@ -512,7 +487,7 @@ def animate(i):
         ax4.set_xticklabels(list(l4_cap))
         ax4.set_yticklabels(list(h4_cap))
         ax4.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax4.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax4.text(400, 0, f' T4: PX105_RMY\n IMO Number: 101412', fontsize=10, color='white')
         # ax2.axis('off')
         nx4 += 1
 
@@ -539,7 +514,7 @@ def animate(i):
         ax4.set_xticklabels(list(l4_cap))
         ax4.set_yticklabels(list(h4_cap))
         ax4.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax4.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax4.text(400, 0, f' T4: PX105_RMY\n IMO Number: 101412', fontsize=10, color='white')
         nx4 = 0
 
 
@@ -572,7 +547,7 @@ def animate(i):
         ax5.set_xticklabels(list(l5_cap))
         ax5.set_yticklabels(list(h5_cap))
         ax5.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax5.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax5.text(400, 0, f' T5: PSV_UT776CD\n IMO Number: 104323', fontsize=10, color='white')
         # ax2.axis('off')
         nx5 += 1
 
@@ -599,7 +574,7 @@ def animate(i):
         ax5.set_xticklabels(list(l5_cap))
         ax5.set_yticklabels(list(h5_cap))
         ax5.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax5.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax5.text(400, 0, f' T5: PSV_UT776CD\n IMO Number: 104323', fontsize=10, color='white')
         # ax2.axis('off')
         nx5 += 1
 
@@ -625,7 +600,7 @@ def animate(i):
         ax5.set_xticklabels(list(l5_cap))
         ax5.set_yticklabels(list(h5_cap))
         ax5.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax5.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax5.text(400, 0, f' T5: PSV_UT776CD\n IMO Number: 104323', fontsize=10, color='white')
         # ax2.axis('off')
         nx5 += 1
 
@@ -652,16 +627,8 @@ def animate(i):
         ax5.set_xticklabels(list(l5_cap))
         ax5.set_yticklabels(list(h5_cap))
         ax5.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
-        ax5.text(400, 0, f' TS1: Fast Petrol Vessel\n IMO Number: 10023', fontsize=10, color='white')
+        ax5.text(400, 0, f' T5: PSV_UT776CD\n IMO Number: 104323', fontsize=10, color='white')
         nx5 = 0
-
-
-
-
-
-
-
-
 
     plt.plot(x, y1, label='TS1', linewidth=0.6)
     plt.plot(x, y2, label='TS2', linewidth=0.6)
@@ -704,10 +671,6 @@ def animate(i):
     ax10.legend(loc='upper right')
     ax10.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
     # plt.grid()
-
-
-
-
 
 ani = FuncAnimation(plt.gcf(), animate, interval=1000)
 

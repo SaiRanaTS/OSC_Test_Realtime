@@ -33,12 +33,12 @@ import CRI_Functions_Support.domain
 #from matplotlib import pyplot
 #from descartes import PolygonPatch
 
-# Ship_number = 3
-# # load data Simulation_Data/F5R2.xlsx
-# path = 'Simulation_Data/F5R2.xlsx'  # D1R2, D2R1-2, F1R1-2, F4R1-5, F5R1-4
-# wb = xlrd.open_workbook(filename=path)  # 打开文件
-# ov_names = ['Ulstein', 'SULA', 'HEROY', 'Haram']
-# ov_data = wb.sheet_by_name(ov_names[Ship_number - 1])  # 0-3
+Ship_number = 3
+# load data Simulation_Data/F5R2.xlsx
+path = 'Simulation_Data/F5R2.xlsx'  # D1R2, D2R1-2, F1R1-2, F4R1-5, F5R1-4
+wb = xlrd.open_workbook(filename=path)  # 打开文件
+ov_names = ['Ulstein', 'SULA', 'HEROY', 'Haram']
+ov_data = wb.sheet_by_name(ov_names[Ship_number - 1])  # 0-3
 # tv1_data = wb.sheet_by_name('Hannara')
 # tv2_data = wb.sheet_by_name('Stavangerfjord')
 # tv3_data = wb.sheet_by_name('UNI')
@@ -258,12 +258,19 @@ def update(frame):
     x00 = data0['Num']
     numberiii = len(x00)-1
 
+    dataori = pd.read_csv('Sim_Live_Data/ori/OriOS.csv')
+    xo00 = dataori['Num']
+    numberiiio = len(xo00)-1
+
+    OSgen_ang = dataori['Own_Ori'][xo00][numberiiio]
+
+
+
 
     OSgen_x = data0['Lo'][x00][numberiii]
-    print(OSgen_x)
     OSgen_y = data0['La'][x00][numberiii]
     OSgen_Velo = data0['Total Speed'][x00][numberiii]
-    OSgen_ang = data0['Heading(Deg)'][x00][numberiii]
+    #OSgen_ang = data0['Heading(Deg)'][x00][numberiii]
 
     #print('Own X:',OwnGen_x)
     #print('Own Y:', OwnGen_y)

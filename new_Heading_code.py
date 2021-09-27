@@ -35,8 +35,7 @@ def find_gps_port_value(actor, port_type, port_name_ls):
     num_port_name = len(port_name_ls)
     speed = []
     gps_info = []
-    orientation = []
-    result = [[], [], []]
+    result = [[], []]
     for i in range(num_port_name):
         for j in range(num_port):
             port_name = port_list[j]['port']['name']
@@ -47,10 +46,7 @@ def find_gps_port_value(actor, port_type, port_name_ls):
                         speed.append(v['value'])
                     result[1] = speed
                 elif port_name == "ORIENTATION".upper():
-                    value_ls = port_list[j]['value']['valueObjects']
-                    for v in value_ls:
-                        orientation.append(v['value'])
-                    result[2] = orientation
+                    break
                 else:
                     gps_info.append(port_list[j]['value']['value'])
                     result[0] = gps_info
@@ -100,7 +96,7 @@ async def start():
         'LATITUDE': None,
         'EASTING': None,
         'NORTHING': None,
-        'BEARING': None,
+        # 'BEARING': None,
         'WORLD_VELOCITY': [],
         'ORIENTATION':[]
     }
@@ -117,7 +113,7 @@ async def start():
         'COMMANDED_RPM': [] # starboard rpm, port rpm
     }
 
-    port_gps_name_ls, port_ori_info_name_ls, port_actuator_name_ls = [], [], []
+    port_gps_name_ls, port_actuator_name_ls = [], []
     for name in port_gps_info:
         port_gps_name_ls.append(name)
     port_gps_name_ls.pop(0) # port's name
@@ -165,7 +161,6 @@ async def start():
     gunnerus_thruster_starboard['name'] = 'Starboard'
 
     actor_info_list = [gps_gunnerus, gps_gunnerus_ori, gps_target_ship_1, gps_target_ship_2, gps_target_ship_3, gps_target_ship_4, gps_target_ship_5, gunnerus_thruster_port, gunnerus_thruster_starboard]
-
     port_value = []
     async with websockets.connect(uri, ping_timeout=None) as websocket:
         while True:
@@ -195,15 +190,14 @@ async def start():
                                 # port_value.append(actuator_port_value)
                                 # print(port_value)
                             # elif actor['clazz'].__contains__('TypedSixDOFActor'):
-                            # elif actor['clazz'].__contains__('TypedSixDOFActor'):
-                                gps_gunnerus_orientation = find_gps_port_value(actor, 'output', port_gps_name_ls)
+                            elif actor['clazz'].__contains__('TypedSixDOFActor'):
+                                gps_gunnerus_orientation = find_ori_port_value(actor, 'output', port_gps_name_ls)
                                 print(gps_gunnerus_orientation)
                             else:
                                 gps_port_value_rest = find_gps_port_value(actor, 'output', port_gps_name_ls)
                                 #ls_to_dic(gps_port_value, port_gps_name_ls)
                                 port_value.append(gps_port_value_rest)
-                                print(port_value[0])
-                                #print(port_value[0][1])
+                                #print(port_value[0])
                 except:
                     traceback.print_exc()
                 # save the actuation factor

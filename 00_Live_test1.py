@@ -419,11 +419,6 @@ def TS5_find_gps_port_value(actor, port_type, port_name_ls,n):
     return TS5_result
 
 
-
-
-
-
-
 def find_actuator_port_value(actor, port_type, port_name_ls):
     port_list = actor[port_type]
     num_port = len(port_list)
@@ -451,7 +446,7 @@ def set_actuator_json(actor, port_type, deg):
             port_list[i]['value']['value'] = deg * 3.14 / 180
             # print(port_list[i]['value']['value'])
         elif port_name == "COMMANDED_RPM".upper():
-            port_list[i]['value']['value'] = 10                                             # Why Constant Value ?
+            port_list[i]['value']['value'] = 10       # Why the fuck Constant Value ?
             # print(port_list[i]['value']['value'])
     return actor
 
