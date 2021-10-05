@@ -25,7 +25,6 @@ ax.imshow(img, alpha=0.96)
 plt.grid(alpha=0.2)
 plt.axis('off')
 
-
 ax1 = fig.add_subplot(251)
 ax2 = fig.add_subplot(252)
 
@@ -39,11 +38,6 @@ ax7 = fig.add_subplot(257)
 ax8 = fig.add_subplot(258)
 ax9 = fig.add_subplot(259)
 ax10 = fig.add_subplot(2,5,10)
-
-
-
-
-
 
 
 

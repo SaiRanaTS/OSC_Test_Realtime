@@ -140,7 +140,6 @@ def animate(i):
         # ax2.axis('off')
         nx += 1
 
-
     elif nx == 2:
 
         # Target Ship 1 img
@@ -191,12 +190,6 @@ def animate(i):
         ax1.grid(color='w', linestyle='-', linewidth=0.1, alpha=0.3)
         ax1.text(400, 0, f' T1: PSV_UT754WP\n IMO Number: 100230', fontsize=10, color='white')
         nx = 0
-
-
-
-
-
-
 
 
     if nx2 == 0:
@@ -674,7 +667,7 @@ def animate(i):
 
 ani = FuncAnimation(plt.gcf(), animate, interval=1000)
 
-plt.legend(loc='upper right')
+#plt.legend(loc='upper right')
 plt.tight_layout()
 # fig.suptitle('Vertically stacked subplots')
 plt.axis('off')
